@@ -14,6 +14,10 @@ The process of opening a video, analysing the frames to find for a transition an
 
 I don't know why this happens in Rust but not in Python. Maybe the crate I'm using isn't optimised, or my logic needs to be different in Rust.
 
+- (update - [commit 6c700b8](https://github.com/Joao-1/anime-gif-generator/commit/6c700b88c60c5624daafc267f20af6083ec2c3e8))
+
+With the compression of the GIF to a smaller width and height, the creation of the GIFs increased significantly. It took ~20 minutes to analyze and create all the GIFs from the same episode.
+
 #### False positive
 Another issue identified is the high number of false positives when detecting scene transitions, particularly on anime with action scenes. The analysis system may generate a false positive if there are spells, high velocity, or excessive lighting present. This is because it analyses changes in pixels and provides a percentage of the difference. If the percentage exceeds a default value, the system will identify it as a new transition, even if it is not.
 
@@ -26,5 +30,8 @@ Simply unusable.
 
 ### Tasks
 - [ ] Add tests
-- [ ] Compress generated GIFs to reduce their file size. Some GIFs can be over 100Mb, making them unusable.
-- [ ] Make it useable as a CLI tool
+- [ ] Compress generated GIFs to reduce their file size. Some GIFs can be over 100Mb, making them unusable
+- [x] Make it useable as a CLI tool
+- [ ] Set the GIF to start again after each time it is played
+- [ ] Set all the details of the GIF in the metadata (such as the start and end frame, time, name, episode, etc.)
+- [ ] Make it multithreaded (maybe)
