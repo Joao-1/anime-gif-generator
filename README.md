@@ -24,7 +24,7 @@ Another issue identified is the high number of false positives when detecting sc
 The number of false positives is low for slice of life animes such as K-on, Non Non Biyori, and Yure Camp. However, animes with many action scenes, such as Kimetsu No Yaiba, Sousou No Frieren, and Jujutsu Kaisen, have many false positive GIFs.
 
 #### FPS
-The most awkward and annoying issue is the low FPS of the GIFs, which makes them unusable.  It is possible that OpenCV is the cause, but I am unsure how to improve this. See the example below:
+The most awkward and annoying issue is the low FPS of the GIFs, which makes them unusable.  It is possible that OpenCV is the cause, but I am unsure how to improve this. See the example below (if the GIF does not run, please reload the page.): 
 ![gif1706690361](https://github.com/Joao-1/anime-gif-generator/assets/58475277/917254c5-f163-41b1-80a9-7f11142d15f5)
 Simply unusable.
 
